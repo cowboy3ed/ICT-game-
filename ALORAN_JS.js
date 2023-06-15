@@ -115,7 +115,7 @@ const textNodes = [
   },
   {
     id: 6,
-    text: 'Giving your ticket back, you walk into the lobby, and theres three hallways; left, right and center. You wonder where to go.',
+    text: 'Giving your ticket back, you walk into the lobby, theres three hallways; left, right and center. You wonder where to go.',
 
     options: [
         {
@@ -264,6 +264,8 @@ const textNodes = [
         },
         {
           text: 'Right Room',
+          setState: {noflashlight: true},
+          setState: {noIanRay: true},
           nextText: 27
         }
       ]
@@ -277,6 +279,7 @@ const textNodes = [
         {
           text: 'Right Room',
           setState: { flashlight: true },
+          requiredState: (currentState) => currentState.noIanRay,
           nextText: 27
         },
         {
@@ -295,13 +298,11 @@ const textNodes = [
         {
           text: 'Shine a flashlight at them',
           requiredState: (currentState) => currentState.flashlight,
-          setState: { IanRay: true },
           nextText: 19
         },
         {
             text: '"Who are you???"',
             requiredState: (currentState) => currentState.noflashlight,
-            setState: { IanRay: true },
             nextText: 22
           },
       ]
@@ -350,6 +351,7 @@ const textNodes = [
         },
         {
             text: '"No I havent, this was the first room I went to."',
+            requiredState: (currentState) => currentState.noflashlight,
             nextText: 22
           },
       ]
@@ -510,7 +512,8 @@ const textNodes = [
         },
         {
           text: '"What...?"',
-          nextText: 39
+          requiredState: (currentState) => currentState.noIanRay,
+          nextText: 35
         },
 
     ]
@@ -582,7 +585,7 @@ const textNodes = [
 },
 {
     id: 34,
-    text: '"No nothing." A girl with orange hair sobs.',
+    text: '"No nothing." A girl with orange hair sobs while a green eyed girl tries to comfort her.',
 
     options: [
         {
@@ -626,7 +629,7 @@ const textNodes = [
     options: [
         {
           text: '"What the Hell."',
-          nextText: 40
+          nextText: 41
         },
 
     ]
@@ -634,40 +637,58 @@ const textNodes = [
 },
 
 {
-    id: 40,
+    id: 41,
     text: '"Hello." A distorted voice talks.',
 
     options: [
         {
           text: '"Who are you???"',
             requiredState: (currentState) => currentState.IanRay,
-          nextText: 41
+          nextText: 42
         },
         {
           text: '"Who are you???"',
             requiredState: (currentState) => currentState.noIanRay,
-          nextText: 42
+          nextText: 43
         },
     ]
 },
 
 {
     id: 42,
-    text: '"My name isnt important. I am here to... teach you lessons."',
+    text: '"My name isnt important. I am here to... teach you lessons." \n "Is this some sick joke?" The green eyed girl scowls. \n "Is this a prank?" Ray puts his hands on his mouth.',
 
     options: [
         {
           text: '"What are you talking about?"',
             requiredState: (currentState) => currentState.IanRay,
-          nextText: 38
+          nextText: 44
         },
         {
           text: '"Are you serious right now?"',
             requiredState: (currentState) => currentState.noIanRay,
-          nextText: 38
+          nextText: 45
         },
     ]
 },
+{
+  id: 43,
+  text: '"My name isnt important. I am here to... teach you lessons."',
+
+  options: [
+      {
+        text: '"What are you talking about?"',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 44
+      },
+      {
+        text: '"Are you serious right now?"',
+          requiredState: (currentState) => currentState.noIanRay,
+        nextText: 45
+      },
+  ]
+},
+
 
 
 
