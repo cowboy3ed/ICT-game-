@@ -64,7 +64,7 @@ const textNodes = [
       {
         text: 'Talk to Reception',
         nextText: 2,
-        imgUrl:"chapter1img.png"
+        imgUrl:"frame0000.png"
       },
     ]
   },
@@ -76,7 +76,7 @@ const textNodes = [
       {
         text: 'Next',
         nextText: 3,
-        imgUrl:"chapter1img.png"
+        imgUrl:"frame0001.png"
       },
     ]
   },
@@ -88,6 +88,7 @@ const textNodes = [
       {
         text: 'Next',
         nextText: 4,
+        imgUrl:"frame0000.png"
       },
     ]
   },
@@ -99,6 +100,7 @@ const textNodes = [
       {
         text: 'Next',
         nextText: 5,
+        imgUrl:"frame0000.png"
       },
     ]
   },
@@ -110,6 +112,7 @@ const textNodes = [
       {
         text: 'Next',
         nextText: 6,
+        imgUrl:"frame0003.png"
       },
     ]
   },
@@ -120,14 +123,17 @@ const textNodes = [
     options: [
         {
           text: 'Left Room',
+          imgUrl: "frame0013.png",
           nextText: 7,
         },
         {
           text: 'Right Room',
+          imgUrl: "frame0013.png",
           nextText: 9,
         },
         {
           text: 'Center',
+          imgUrl: "frame0013.png",
           nextText: 11,
         }
       ]
@@ -139,7 +145,8 @@ const textNodes = [
     options: [
         {
           text: 'Next',
-          nextText: 8
+          nextText: 8,
+          imgUrl: "frame0013.png",
         },
       ]
 
@@ -151,11 +158,13 @@ const textNodes = [
     options: [
         {
           text: 'Right Room',
-          nextText: 9
+          nextText: 9,
+          imgUrl: "frame0013.png",
         },
         {
           text: 'Center',
-          nextText: 11
+          nextText: 11,
+          imgUrl: "frame0013.png",
         }
       ]
 
@@ -167,6 +176,7 @@ const textNodes = [
   options: [
       {
         text: 'Next',
+        imgUrl: "frame0013.png",
         nextText: 10
       },
     ]
@@ -179,10 +189,12 @@ const textNodes = [
     options: [
         {
           text: 'Left Room',
+          imgUrl: "frame0013.png",
           nextText: 7
         },
         {
           text: 'Center',
+          imgUrl: "frame0013.png",
           nextText: 11
         }
       ]
@@ -195,6 +207,7 @@ const textNodes = [
     options: [
         {
           text: 'Check the statues.',
+          imgUrl: "frame0013.png",
           nextText: 12
         },
     ]
@@ -207,6 +220,7 @@ const textNodes = [
     options: [
         {
           text: 'Next',
+          imgUrl: "frame0013.png",
           nextText: 13
         },
     ]
@@ -219,6 +233,7 @@ const textNodes = [
     options: [
         {
           text: 'Next',
+          imgUrl: "frame0013.png",
           nextText: 14
         },
     ]
@@ -231,6 +246,7 @@ const textNodes = [
     options: [
         {
           text: 'Next',
+          imgUrl: "frame0013.png",
           nextText: 15
         },
     ]
@@ -243,6 +259,7 @@ const textNodes = [
     options: [
         {
           text: 'Next',
+          imgUrl: "frame0013.png",
           nextText: 16
         },
     ]
@@ -255,17 +272,20 @@ const textNodes = [
     options: [
         {
           text: 'Reception',
+          imgUrl: "frame0013.png",
           nextText: 17
         },
         {
           text: 'Left Room',
           setState: {noflashlight: true},
+          imgUrl: "frame0013.png",
           nextText: 18
         },
         {
           text: 'Right Room',
           setState: {noflashlight: true},
           setState: {noIanRay: true},
+          imgUrl: "frame0013.png",
           nextText: 27
         }
       ]
@@ -278,14 +298,15 @@ const textNodes = [
     options: [
         {
           text: 'Right Room',
-          setState: { flashlight: true },
-          requiredState: (currentState) => currentState.noIanRay,
+          setState: { noIanRay: true },
+          imgUrl: "frame0013.png",
           nextText: 27
         },
         {
           text: 'Left Room',
           setState: { flashlight: true },
-          nextText: 18
+          nextText: 18,
+          imgUrl: "frame0016.png"
         },
        
       ]
@@ -298,24 +319,27 @@ const textNodes = [
         {
           text: 'Shine a flashlight at them',
           requiredState: (currentState) => currentState.flashlight,
+          imgUrl: "frame0018.png",
           nextText: 19
         },
         {
             text: '"Who are you???"',
             requiredState: (currentState) => currentState.noflashlight,
-            nextText: 22
+            nextText: 22,
+            imgUrl: "frame0019.png",
           },
       ]
 
 },
 {
     id: 19,
-    text: '"Are you a guard? What happened?" The red haired man asked, the blue shirted man just seemed to be confused as well.',
+    text: '"Are you a guard? What happened?" The red haired man asked, the blue jacketed man just seemed to be confused as well.',
 
     options: [
         {
           text: '"No Im not a guard!"',
           requiredState: (currentState) => currentState.flashlight,
+          imgUrl: "frame0013.png",
           nextText: 20
         },
       ]
@@ -329,11 +353,13 @@ const textNodes = [
         {
           text: '"I really dont know either. I was looking for some answers too."',
           requiredState: (currentState) => currentState.flashlight,
+          imgUrl: "frame0013.png",
           nextText: 21
         },
         {
           text: '"Look, who are you guys?"',
           requiredState: (currentState) => currentState.flashlight,
+          imgUrl: "frame0013.png",
           nextText: 22
           },
       ]
@@ -341,17 +367,19 @@ const textNodes = [
 },
 {
     id: 21,
-    text: '"Have you checked the other rooms?" The blue shirted man asked.',
+    text: '"Have you checked the other rooms?" The blue jacketed man asked.',
 
     options: [
         {
           text: '"No I havent, the receptionist lady is gone too, and the doors are locked."',
           requiredState: (currentState) => currentState.flashlight,
+          imgUrl: "frame0013.png",
           nextText: 23
         },
         {
             text: '"No I havent, this was the first room I went to."',
             requiredState: (currentState) => currentState.noflashlight,
+            imgUrl: "frame0013.png",
             nextText: 22
           },
       ]
@@ -359,7 +387,7 @@ const textNodes = [
 },
 {
     id: 22,
-    text: '"See Ian? We should have introduced first." The blue haired man said. \n "Im sorry for this guys manners. Im Ray, hes Ian."',
+    text: '"See Ian? We should have introduced first." The blue jacketed man said. \n "Im sorry for this guys manners. Im Ray, hes Ian."',
 
     options: [
         {
@@ -573,7 +601,7 @@ const textNodes = [
 },
 {
     id: 33,
-    text: 'Ian and Ray see two other people. Theyre crying and hug each other. You feel horrible.',
+    text: 'Ian and Ray see two other people. Theyre crying and hugging each other. You feel horrible.',
 
     options: [
         {
@@ -677,14 +705,190 @@ const textNodes = [
 
   options: [
       {
-        text: '"What are you talking about?"',
-          requiredState: (currentState) => currentState.IanRay,
-        nextText: 44
-      },
-      {
         text: '"Are you serious right now?"',
           requiredState: (currentState) => currentState.noIanRay,
+        nextText: 52
+      },
+  ]
+},
+{
+  id: 44,
+  text: '"No, what the hell. We arent participating in this saw ripoff. Lets get frank." The green eyed girl, sceptical of this place.',
+
+  options: [
+      {
+        text: '"This is crazy."',
+          requiredState: (currentState) => currentState.IanRay,
         nextText: 45
+      },
+  ]
+},
+{
+  id: 45,
+  text: '"Franks not coming back. After all, I wasnt the one who killed him." The voice sneers. "And I suggest you to obey unless you want to look like him soon."',
+
+  options: [
+      {
+        text: '"..."',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 46
+      },
+  ]
+},
+{
+  id: 46,
+  text: 'Everyone looked agitated, confused and sad. "Why us?" Ian says holding his breath.',
+
+  options: [
+      {
+        text: '"Why me?"',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 47
+      },
+  ]
+},
+{
+  id: 47,
+  text: '"Youll see. Now listen to me carefully."',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 48
+      },
+  ]
+},
+{
+  id: 48,
+  text: 'Anxiously, the airs tension rises. "You have 1 hour to find who did this. You will have to vote at the end of it. If none of you votes, all of you die. If a person is most voted, they die. If the wrong person is convicted, the game will continue. If the right person is convicted, they die, though the game isnt over yet. Keep your eyes open. I wont let you go so easily."',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 49
+      },
+  ]
+},
+{
+  id: 49,
+  text: '"Why would we even kill someone! Let alone our friends?" the orange haired girl cries.',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 50
+      },
+  ]
+},
+{
+  id: 50,
+  text: '"See, I assigned a person to kill to save themselves, and they have to keep themselves hidden to gain a wish."',
+
+  options: [
+      {
+        text: 'A wish?',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 51
+      },
+  ]
+},
+{
+  id: 50,
+  text: '"Anything you want. You just have to kill for it."',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 51
+      },
+  ]
+},
+{
+  id: 50,
+  text: '"The person will keep killing until it is only one person. They will be the only survivors."',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.IanRay,
+        nextText: 51
+      },
+  ]
+},
+{
+  id: 52,
+  text: '"Anything you want. You just have to kill for it."',
+
+  options: [
+      {
+        text: '...',
+          requiredState: (currentState) => currentState.noIanRay,
+        nextText: 53
+      },
+  ]
+},
+{
+  id: 53,
+  text: 'The voice beckons you, "Its a dangerous game. Will you listen to the rules?"',
+
+  options: [
+      {
+        text: '...',
+        nextText: 54
+      },
+  ]
+},
+{
+  id: 54,
+  text: '"Kill everyone except one without getting caught. They arent what they seem. The person you end up with; They will try and kill you in rage and anger. They have an hour to figure out who the killer is. If, you get voted out, you die."',
+
+  options: [
+      {
+        text: 'Why are you doing this to me!?',
+        nextText: 55
+      },
+  ]
+},
+{
+  id: 55,
+  text: '"I am simply proposing a deal. If you dont accept, it will have consequences."',
+
+  options: [
+      {
+        text: 'No, absolutely not.',
+        nextText: 56
+      },
+      {
+        text: '...I accept.',
+        nextText: 60
+      },
+  ]
+},
+{
+  id: 56,
+  text: '"Everybody else did."',
+
+  options: [
+      {
+        text: '...',
+        nextText: 60
+      },
+  ]
+},
+
+
+{
+  id: 60,
+  text: '*End of Macabre Morii DEMO*',
+
+  options: [
+      {
+        text: 'Reset',
+        nextText: -1,
       },
   ]
 },
